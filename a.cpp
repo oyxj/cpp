@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include <string.h>
 using namespace std;
 int main()
@@ -15,7 +16,7 @@ int main()
     cout<<"strlen of const char* : "<<text2<<" is "<<sizeof(text2)<<endl;
 
     char* ptr1="hello";// Assign the string literal to a variable
-    ptr1[1]='a';// Undefined behavior;
+    //ptr1[1]='a';// Undefined behavior;
     const char* ptr2="hello";// Assign the string literal to a variable.
     //ptr2[1]='a';// Error! Attemps to write to read-only memory.
     char arr[]="hello";// Compile takes care of creating appropriate sized character array arr.
@@ -27,4 +28,10 @@ int main()
 
     cout<<"======================================="<<endl;
     cout<<"string"<<endl;
+    string A("12");
+    string B("34");
+    cout<<"str("<<A<<") + str("<<B<<") is "<<A+B<<endl;
+
+    getchar();
+    return 0;
 }
